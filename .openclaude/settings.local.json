@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(curl -s http://localhost:5000/api/bookings)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(f''''Total bookings: {len\\(data\\)}''''\\); [print\\(f  {b[''''destination'''']} | {b[''''rideType'''']} | ₹{b[''''fare'''']} | {b[''''status'''']} | {b[''''driverName'''']}\\) for b in data]\")",
+      "Bash(curl -s http://localhost:3000 -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl:*)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(f''''{len\\(data\\)} bookings''''\\)\")"
+    ]
+  }
+}
